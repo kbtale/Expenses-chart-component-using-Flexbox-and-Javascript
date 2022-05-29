@@ -1,0 +1,182 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  background-color: hsl(27, 66%, 92%);
+}
+
+@font-face {
+  font-family: "DM";
+  src: url(../fonts/DMSans-Regular.ttf);
+}
+
+.container, .box, .inline-box {
+    display: flex;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  row-gap: 1.5rem;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.box {
+  padding: 1.2rem 1.8rem;
+  border-radius: 1.2rem;
+  width: 32%;
+  min-width: calc(440px - 3em);
+  box-sizing: border-box;
+}
+
+.dmsans {
+  font-family: "DM";
+}
+
+.reg {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.fs-0 {
+  font-size: 14px;
+}
+
+.fs-1 {
+  font-size: 18px;
+}
+
+.fs-2 {
+  font-size: 24px;
+}
+
+.fs-3 {
+  font-size: 27px;
+}
+
+.fs-4 {
+  font-size: 36px;
+}
+
+.box.balance {
+  align-items: center;
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(27, 66%, 92%);
+}
+
+.box.spending {
+  background-color: rgb(255,252,247);
+  flex-wrap: wrap;
+}
+
+.light-brown {
+  color: hsl(28, 10%, 53%);
+}
+
+.dark-brown {
+  color: hsl(25, 47%, 15%);
+}
+
+.inline-box.chart {
+  column-gap: .9rem;
+  justify-content: center;
+}
+
+.chartEl {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1 1 0px;
+}
+
+.chartEl:hover {
+  cursor: pointer;
+}
+.chartEl:hover>.bar {
+  background-color: rgb(255,155,137);
+}
+.chartEl.active:hover>.bar {
+  background-color: rgb(180,223,229);
+}
+
+.chartEl>.amount {
+  opacity: 0;
+  width: 140%;
+  background-color: hsl(25, 47%, 15%);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 0px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -70%;
+  margin-bottom: .3rem;
+  transition: all .1s;
+}
+.chartEl:hover>.amount {
+  opacity: 100%;
+}
+.chartEl.active>.amount {
+  opacity: 100%;
+}
+
+.chartEl>.bar {
+  content: "\200B";
+  background-color: hsl(10, 79%, 65%);
+  display: block;
+  border-radius: 5px;
+  transition: all .2s;
+}
+.chartEl.active>.bar {
+  background-color: hsl(186, 34%, 60%);
+}
+
+.month-total {
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: .5rem;
+}
+
+.box .separator {
+  flex: 0 0 100%;
+  margin: 1.5rem 0;
+  border-color: hsl(27, 66%, 92%);
+}
+
+.box .full-w, .container .full-w {
+  flex-basis: 100%;
+}
+
+.box.sp-b, .inline-box.sp-b {
+  justify-content: space-between;
+}
+
+.box.a-e, .inline-box.a-e {
+  align-items: flex-end;
+}
+
+.box.s, .inline-box.s {
+  justify-content: stretch;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.ta-l {
+  text-align: left;
+}
